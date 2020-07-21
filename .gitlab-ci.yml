@@ -1,0 +1,26 @@
+variables:
+    TMP_DIR: /tmp
+    APP_REPO: git@repo.server.com/sample001.git
+    APP_DIR: /home/user/sample001
+stages:
+    - build
+    - deploy
+    - migrate
+BUILD:
+    script:
+    tags:
+      - samle001
+    stage: build
+    only:
+DEPLOY:
+    script:
+    tags:
+      - samle001
+    stage: deploy
+    only:
+MIGRATE:
+    script:
+    tags:
+      - samle001
+    stage: migrate
+    only:

@@ -1,0 +1,10 @@
+{
+    "name": "sample001",
+    "description": "sample application",
+    "minimum-stability": "dev",
+    "require": {
+        "sofadesign/limonade": ">=0.5.1",
+        "catfan/medoo":"1.7.10",
+        "predis/predis":"1.1.1"
+    }
+}

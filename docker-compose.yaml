@@ -1,0 +1,42 @@
+networks:
+    sample001:
+        name: sample001
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 172.28.82.0/24
+services:
+    web_sample001:
+        image: 
+        container_name: web_sample001
+        hostname: web_sample001
+        networks: 
+            sample001:
+                ipv4_address: 172.28.82.10
+        restart: always
+    app_sample001:
+        image: 
+        container_name: app_sample001
+        hostname: app_sample001
+        networks: 
+            sample001:
+                ipv4_address: 172.28.82.11
+        restart: always
+    db_sample001:
+        image: postgres:10.12
+        container_name: db_sample001
+        hostname: db_sample001
+        networks: 
+            sample001:
+                ipv4_address: 172.28.82.12
+        restart: always
+    redis_sample001:
+        image: redis:5.0.7
+        container_name: redis_sample001
+        hostname: redis_sample001
+        networks: 
+            sample001:
+                ipv4_address: 172.28.82.13
+        restart: always
+version: "3.7"
